@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#051438">
+<meta name="color-scheme" content="light only">
+<title>Agência Beltz — Do invisível ao inevitável</title>
+<meta name="description" content="Fazemos marcas e empresas serem vistas de forma profissional na internet. Marca, presença digital e comunicação. Agência Beltz, Marília — SP.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agência Beltz — Do invisível ao inevitável">
+<meta property="og:description" content="Fazemos marcas e empresas serem vistas de forma profissional na internet.">
+<meta property="og:url" content="https://agenciabeltz.com.br/">
+<!-- ESPAÇO PARA O FAVICON: troque o caminho pelo arquivo do favicon (PNG quadrado 512x512) -->
+<link rel="icon" type="image/png" href="Logo Agencia.png">
+<link rel="apple-touch-icon" href="Logo Agencia.png">
+<!-- FONTES -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* =========================================================
+   AGÊNCIA BELTZ — CSS COMPARTILHADO (todas as páginas)
+   Fonte: Space Grotesk (arquivos em /assets/fonts/)
+========================================================= */
+
+/* 00. FONTES (carregadas via Google Fonts no <head>) */
+
+/* 01. VARIÁVEIS E TEMAS (dark / light) */
+:root{
+  color-scheme:light only!important;
+  --bg:#051438; --blue:#1E6FFF; --blue-2:#2D8CFF;
+  --font:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-display:'Syne','DM Sans',system-ui,sans-serif;
+  --font-ui:'Poppins','DM Sans',system-ui,sans-serif;
+  --container:1280px; --pad:clamp(20px,4vw,48px); --section:clamp(80px,10vw,150px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --text:#C9D2E3; --heading:#fff; --muted:#8E9CBA; --line:rgba(201,210,227,.16);
+  --card:#0a1d47; --hover:rgba(17,51,84,.35); --accent:#2D8CFF;
+}
+.dark{--text:#C9D2E3;--heading:#fff;--muted:#8E9CBA;--line:rgba(201,210,227,.16);--card:#0a1d47;--hover:rgba(17,51,84,.35);--accent:#2D8CFF;background:var(--bg);color:var(--text)}
+.light{--text:#3d4864;--heading:#051438;--muted:#6b7794;--line:rgba(5,20,56,.14);--card:#f1f4fa;--hover:rgba(5,20,56,.04);--accent:#1E6FFF;background:#fff;color:var(--text)}
+
+/* 02. RESET */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--section) 0}
+strong{color:var(--heading);font-weight:600}
+.hero-slogan{letter-spacing:.3em}
+
+/* 03. TIPOGRAFIA */
+h1,h2,h3{font-family:var(--font-display);color:var(--heading);line-height:1.08;letter-spacing:-.02em;font-weight:600}
+.big-quote,.statement,.hero-title,.next-case b{font-family:var(--font-display)}
+.btn,.nav a,.eyebrow,.pill-list li,dt,th,.link-arrow,.hero-slogan,.crumbs,.step b,.tl b,.pillar .n,.svc-head .n,.brand-text,label,summary,.footer h4,.form-note,small,.testimonial-author{font-family:var(--font-ui)}
+h1{font-size:clamp(34px,5vw,70px);text-transform:uppercase;font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(26px,3.4vw,46px)}
+h3{font-size:clamp(20px,2vw,26px);line-height:1.2;letter-spacing:-.02em}
+.eyebrow{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:22px}
+.lead{font-size:clamp(16px,1.4vw,19px);max-width:60ch}
+.stack{display:grid;gap:24px}
+
+/* 04. BOTÕES E LINKS */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:999px;font-size:14px;font-weight:500;transition:.3s var(--ease);border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-2);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--heading)}
+.btn-ghost:hover{border-color:var(--heading);transform:translateY(-2px)}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.link-arrow{display:inline-flex;gap:10px;align-items:center;color:var(--heading);font-weight:500;font-size:15px;border-bottom:1px solid var(--line);padding-bottom:4px;transition:.3s var(--ease);width:fit-content}
+.link-arrow span{transition:transform .3s var(--ease)}
+.link-arrow:hover{border-color:var(--accent)}
+.link-arrow:hover span{transform:translateX(5px)}
+
+/* 05. HEADER / NAVBAR */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;border-bottom:1px solid transparent;background:transparent}
+.header.scrolled,.header.menu-open{background:rgba(5,20,56,.96);border-color:var(--line)}
+.header-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:80px;gap:24px}
+.brand{justify-self:start;display:inline-flex;align-items:center;gap:10px}
+.brand-img{height:30px;width:auto}
+.brand-text{font-weight:700;font-size:22px;letter-spacing:.16em;color:var(--heading)}
+.nav{display:flex;align-items:center;gap:32px;justify-self:center}
+.nav a{font-size:14px;position:relative;transition:color .3s}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--accent);transition:width .3s var(--ease)}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--heading)}
+.nav a:not(.btn):hover::after,.nav a[aria-current="page"]::after{width:100%}
+.nav-cta-mobile{display:none}
+.header-actions{justify-self:end;display:flex;align-items:center;gap:12px}
+.header-cta{padding:11px 22px;color:#fff}
+.burger{display:none;width:44px;height:44px;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--heading);transition:.3s var(--ease)}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:26px}
+.burger[aria-expanded="true"] i:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){top:21px;transform:rotate(-45deg)}
+
+/* 06. HERO (HOME) */
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px var(--pad) 120px;position:relative;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 120%,#113354 0%,rgba(5,20,56,0) 60%)}
+.hero-inner{position:relative;width:100%;display:flex;flex-direction:column;align-items:center}
+.hero-title{font-size:clamp(32px,6.6vw,120px);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+.hero-title span{display:inline}
+.hero-slogan{margin-top:clamp(36px,5vw,72px);font-size:clamp(13px,1.4vw,19px);letter-spacing:.32em;text-transform:uppercase;font-weight:400;color:var(--text)}
+.hero-actions{position:absolute;left:0;right:0;bottom:48px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:0 var(--pad)}
+.hero-actions .btn{padding:13px 24px}
+
+/* 07. HERO INTERNO */
+.page-hero{padding:170px 0 80px}
+.page-hero h1{max-width:16ch}
+.page-hero .lead{margin-top:28px}
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:28px}
+.crumbs a:hover{color:var(--heading)}
+
+/* 08. GRIDS GENÉRICOS */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,120px);align-items:start}
+.split.end{align-items:end}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:52px;flex-wrap:wrap}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.cols-2{display:grid;grid-template-columns:repeat(2,1fr);gap:48px}
+.cols-3 strong,.cols-2 strong{display:block;font-size:18px;margin-bottom:10px}
+.cols-3 p,.cols-2 p{font-size:15px}
+.rule{border-top:1px solid var(--line);padding-top:36px}
+.pill-list{display:flex;flex-wrap:wrap;gap:8px}
+.pill-list li{font-size:12px;padding:6px 14px;border:1px solid var(--line);border-radius:999px}
+.big-quote{font-weight:700;color:var(--heading);font-size:clamp(30px,5.2vw,80px);line-height:1.04;letter-spacing:-.025em;max-width:16ch}
+.big-quote span{color:var(--muted)}
+.statement{font-size:20px;color:var(--heading);max-width:30ch}
+
+/* 09. PILARES (lista editorial) */
+.pillar{display:grid;grid-template-columns:90px 1.1fr 1.4fr auto;gap:32px;align-items:start;padding:42px 0;border-top:1px solid var(--line);transition:.4s var(--ease)}
+.pillar:last-child{border-bottom:1px solid var(--line)}
+.pillar:hover{background:var(--hover);padding-left:20px;padding-right:20px}
+.pillar .n{font-size:15px;color:var(--accent);font-weight:500;padding-top:8px}
+.pillar h3{font-size:clamp(26px,3vw,42px)}
+.pillar p{margin-bottom:18px}
+.go{width:52px;height:52px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--heading);transition:.3s var(--ease)}
+.pillar:hover .go{background:var(--blue);border-color:var(--blue);color:#fff;transform:rotate(-45deg)}
+
+/* 10. SERVIÇOS DETALHADOS */
+.svc{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(32px,6vw,96px);padding:56px 0;border-top:1px solid var(--line)}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc-head{position:sticky;top:110px;align-self:start;display:grid;gap:16px}
+.svc-head .n{color:var(--accent);font-size:14px;font-weight:500}
+.svc-head .btn{width:fit-content}
+.svc dl{display:grid;gap:22px}
+.svc dt,.pillar-block dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:4px}
+.svc dd,.pillar-block dd{font-size:15px}
+.pillar-block{padding:56px 0;border-top:1px solid var(--line)}
+.pillar-block:last-child{border-bottom:1px solid var(--line)}
+.pillar-block .split{margin-top:32px}
+.pillar-block dl{display:grid;gap:20px}
+
+/* tabela comparação */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:14px}
+th,td{text-align:left;padding:20px 24px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--heading);font-size:15px;font-weight:600}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--heading)}
+
+/* 11. PROCESSO */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;border-top:1px solid var(--line)}
+.step{padding:30px 24px 0 0;position:relative}
+.step::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.step b{display:block;font-size:14px;color:var(--accent);margin-bottom:12px;font-weight:500}
+.step h3{font-size:20px}
+.step p{font-size:14px;margin-top:8px}
+.tl{display:grid;grid-template-columns:80px 1fr 2fr;gap:32px;padding:36px 0;border-top:1px solid var(--line)}
+.tl:last-child{border-bottom:1px solid var(--line)}
+.tl b{color:var(--accent);font-size:15px;font-weight:500}
+
+/* 12. DEPOIMENTOS */
+.rail-controls{display:flex;gap:10px}
+.rail-btn{width:48px;height:48px;border:1px solid var(--line);border-radius:50%;color:var(--heading);transition:.3s var(--ease)}
+.rail-btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.rail{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 12px;scrollbar-width:none;cursor:grab}
+.rail::-webkit-scrollbar{display:none}
+.rail.dragging{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.testimonial-card{flex:0 0 min(400px,82vw);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-height:300px}
+.testimonial-quote{color:var(--heading);font-size:17px;line-height:1.6}
+.testimonial-author{display:flex;align-items:center;gap:14px}
+.testimonial-avatar{width:48px;height:48px;border-radius:50%;background:var(--line);overflow:hidden;flex-shrink:0}
+.testimonial-avatar img{width:100%;height:100%;object-fit:cover}
+.testimonial-author strong{display:block;font-size:15px}
+.testimonial-author span{font-size:13px;color:var(--muted)}
+.t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.t-grid .testimonial-card{flex:auto}
+
+/* 13. SOBRE */
+.photo{aspect-ratio:4/5;border-radius:6px;background:var(--card);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;text-align:center;padding:12px}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+/* 14. FAQ */
+details{border-top:1px solid var(--line);padding:22px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:24px;color:var(--heading);font-weight:500;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;line-height:1;color:var(--accent);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:14px;max-width:70ch;font-size:15px}
+
+/* 15. CONTATO */
+form{display:grid;gap:22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+label{display:grid;gap:8px;font-size:13px;color:var(--text)}
+input,select,textarea{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:15px 16px;color:var(--heading);transition:border-color .3s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:0}
+textarea{min-height:140px;resize:vertical}
+select option{background:#fff;color:#051438}
+.contact-list a,.contact-list div{display:flex;justify-content:space-between;gap:16px;padding:22px 0;border-top:1px solid var(--line);color:var(--heading);transition:.3s}
+.contact-list a:hover{color:var(--accent);padding-left:8px}
+.contact-list small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.form-note{font-size:13px;color:var(--muted)}
+
+/* 16. CTA */
+.cta{text-align:center}
+.cta h2{font-size:clamp(28px,4.6vw,66px);max-width:16ch;margin:0 auto 26px;text-transform:uppercase;font-weight:700;letter-spacing:-.01em}
+.cta p{margin:0 auto 38px}
+.cta .actions{justify-content:center}
+
+/* 17. FOOTER */
+.footer{border-top:1px solid var(--line);padding:80px 0 32px;background:#030d27}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr;gap:64px}
+.footer .brand{margin-bottom:16px}
+.footer h4{color:var(--heading);font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px;font-weight:600}
+.footer li{margin-bottom:10px;font-size:14px}
+.footer a:hover{color:var(--heading)}
+.footer-bottom{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 18. REVEAL (só ativo quando o JS carrega) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+main{animation:fade .5s var(--ease)}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.js .page.active{animation:none}}
+
+/* 19. RESPONSIVO */
+@media (max-width:1040px){
+  .header-inner{display:flex;justify-content:space-between}
+  .burger{display:block}
+  .header-cta{display:none}
+  .nav{position:fixed;inset:80px 0 auto 0;background:var(--bg);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--pad) 32px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.35s var(--ease)}
+  .nav.open{transform:none;opacity:1;visibility:visible}
+  .nav a{width:100%;padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .nav a::after{display:none}
+  .nav-cta-mobile{display:inline-flex;margin-top:24px;justify-content:center;border-bottom-color:transparent!important;color:#fff!important}
+}
+@media (max-width:1100px){
+  .pillar{grid-template-columns:60px 1fr auto}
+  .pillar .desc{grid-column:2/4}
+  .steps{grid-template-columns:repeat(3,1fr);row-gap:40px}
+  .svc{grid-template-columns:1fr}.svc-head{position:static}
+}
+@media (max-width:900px){
+  .split,.cols-3,.cols-2,.footer-grid,.t-grid,.row{grid-template-columns:1fr}
+  .cols-3,.cols-2,.footer-grid{gap:32px}
+  .photo{max-width:420px}
+  .tl{grid-template-columns:50px 1fr;gap:12px}.tl p{grid-column:2}
+}
+@media (max-width:640px){
+  .steps{grid-template-columns:1fr 1fr}
+  .pillar{grid-template-columns:1fr;gap:14px}.pillar .desc{grid-column:auto}.go{display:none}
+  .btn{width:100%;justify-content:center}.actions{width:100%}
+  .page-hero{padding:140px 0 60px}
+  .hero-title{white-space:normal;font-size:clamp(34px,12vw,90px);line-height:1}
+  .hero-title span{display:block}
+  .hero-slogan{letter-spacing:.22em;font-size:12px;line-height:1.8}
+  .hero-actions{bottom:32px;flex-direction:column;align-items:stretch}
+}
+
+
+.js .page{display:none}
+.js .page.active{display:block;animation:fade .5s var(--ease)}
+
+:root{
+  --font-display:'Syne',sans-serif;
+  --font-body:'Poppins',sans-serif;
+  --font-label:'DM Sans',sans-serif;
+  --blue-deep:#051438; --blue-mid:#113354; --blue-glow:#1E6FFF; --blue-neon:#2D8CFF;
+  --black:#000000; --white:#FFFFFF;
+  --white-60:rgba(255,255,255,0.6); --white-30:rgba(255,255,255,0.3);
+  --white-10:rgba(255,255,255,0.1); --white-05:rgba(255,255,255,0.05);
+  --glow-soft:rgba(30,111,255,0.15); --glow-strong:rgba(30,111,255,0.4);
+  --bg:var(--blue-deep); --blue:var(--blue-glow); --blue-2:var(--blue-neon);
+  --font:var(--font-body); --accent:var(--blue-neon);
+}
+body{font-family:var(--font-body);overflow-x:hidden}
+h1,h2,h3,.hero-title,.big-quote,.statement,.cta h2,.next-case b{font-family:var(--font-display)}
+.eyebrow,dt,small,.crumbs,.footer-bottom,.case-cat,.form-note{font-family:var(--font-label)}
+.hero{background:radial-gradient(ellipse at 50% 120%,var(--blue-mid) 0%,rgba(5,20,56,0) 60%)}
+.hero-media{background:radial-gradient(ellipse at 50% 120%,var(--blue-mid) 0%,rgba(5,20,56,0) 60%)}
+.btn-primary{box-shadow:0 0 24px var(--glow-soft)}
+.btn-primary:hover{box-shadow:0 0 32px var(--glow-strong)}
+.footer{background:var(--black)}
+.brand-img{height:34px;width:auto}
+.header .brand-img{height:56px}
+h1,h2,h3,.hero-title,.big-quote,.statement,.cta h2{font-family:'Syne',sans-serif;font-weight:800;text-transform:none;letter-spacing:-.02em;line-height:1.02}
+h1,.hero-title{font-size:clamp(36px,5.2vw,80px)}
+h2{font-size:clamp(24px,2.8vw,40px)}
+.hero-title span:last-child{background:linear-gradient(90deg,#DDE9FF 0%,#1E6FFF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta h2{font-size:clamp(28px,4vw,56px)}
+.hero-slogan{text-transform:none;letter-spacing:0;font-size:clamp(16px,1.6vw,22px)}
+:root{--hero-image:url('Hero.png')}
+.hero-media{background-image:linear-gradient(rgba(5,20,56,.55),rgba(5,20,56,.55)),radial-gradient(ellipse at 50% 120%,var(--blue-mid) 0%,rgba(5,20,56,0) 60%),var(--hero-image);background-size:auto,auto,cover;background-position:center}
+.split:has(> .photo){align-items:stretch}
+.photo{aspect-ratio:auto;min-height:320px;position:relative;overflow:hidden}
+.photo{background:#001B45}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6%}
+.nav-logo img{width:100px;height:auto}
+.header-inner{grid-template-columns:1fr auto 1fr}
+img{max-width:100%;height:auto;display:block}
+
+.seo-block{padding:56px 0 24px;background:var(--bg)}
+.seo-details{border-top:1px solid var(--line);padding:0}
+.seo-details summary{font-family:var(--font-body);font-size:16px;font-weight:600;color:var(--heading);padding:22px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.seo-details summary::-webkit-details-marker{display:none}
+.seo-details summary::after{content:"+";font-size:24px;color:var(--accent);transition:transform .3s}
+.seo-details[open] summary::after{transform:rotate(45deg)}
+.seo-content{padding:8px 0 40px;max-width:900px}
+.seo-content h4{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--heading);margin:26px 0 8px;letter-spacing:-.01em}
+.seo-content p{font-size:13px;color:var(--muted);line-height:1.75}
+
+</style>
+</head>
+<body>
+
+<header class="header dark" id="header">
+  <div class="container header-inner">
+    <!-- ESPAÇO PARA A LOGO: troque o arquivo "Logo Agencia.png" -->
+      <a href="#/" class="brand" aria-label="Agência Beltz — início"><img class="brand-img" src="Logo Agencia.png" alt="Agência Beltz"></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#/sobre" data-nav="sobre">Sobre</a>
+      <a href="#/servicos" data-nav="servicos">Serviços</a>
+      <a href="#/processo" data-nav="processo">Processo</a>
+      <a href="#/depoimentos" data-nav="depoimentos">Depoimentos</a>
+      <a href="#/contato" data-nav="contato">Contato</a>
+      <a href="#/contato" data-nav="contato" class="btn btn-primary nav-cta-mobile">Fale com a Beltz</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#/contato" data-nav="contato" class="btn btn-primary header-cta">Fale com a Beltz</a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="page" data-route="" data-title="Agência Beltz — Do invisível ao inevitável" data-desc="Fazemos marcas e empresas serem vistas de forma profissional na internet. Marca, presença digital e comunicação. Agência Beltz, Marília — SP.">
+
+  <section class="hero dark">
+    <!-- IMAGEM DE FUNDO DO HERO: no CSS, troque "--hero-image: none" por --hero-image: url('assets/hero.jpg') -->
+    <div class="hero-media"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title"><span>Agência</span> <span>Beltz</span></h1>
+      <p class="hero-slogan">Do invisível ao inevitável.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#/sobre">Conheça a Beltz</a>
+      <a class="btn btn-ghost" href="#/servicos">Ver serviços</a>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container split end reveal">
+      <div><span class="eyebrow">A Beltz</span><h2>Uma empresa pode ser melhor do que parece.</h2></div>
+      <div class="stack">
+        <p class="lead">Antes de uma pessoa conversar com a sua empresa, ela já formou uma impressão. A Beltz trabalha nessa camada: a distância entre o que a empresa é e como ela é percebida.</p>
+        <a class="link-arrow" href="#/sobre">Conheça a Beltz <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container reveal">
+      <span class="eyebrow">Percepção</span>
+      <p class="big-quote">Quem não é visto, <span>não é lembrado.</span></p>
+      <div class="cols-3 rule" style="margin-top:72px">
+        <div><strong>A primeira impressão vem antes da conversa.</strong><p>Instagram, logo, site, apresentação. Tudo isso é visto antes de qualquer contato.</p></div>
+        <div><strong>A aparência define a expectativa.</strong><p>A forma como a empresa se mostra influencia o que o cliente espera dela, inclusive o valor que aceita pagar.</p></div>
+        <div><strong>Imagem alinhada ao valor.</strong><p>A Beltz trabalha para que o que a empresa aparenta seja o que ela realmente entrega.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container split reveal">
+      <div class="photo"><!-- FOTO DO FUNDADOR: troque o arquivo "Logo Agencia.png" pela foto --><img src="Logo Agencia.png" alt="Gabriel Beltrame, fundador da Agência Beltz" loading="lazy"></div>
+      <div class="stack">
+        <span class="eyebrow">Sobre a Beltz</span>
+        <h2>Beltz é percepção.</h2>
+        <p class="lead">A Beltz é uma agência de Marília, São Paulo, que ajuda empresas a serem percebidas de forma mais profissional, estratégica e desejável na internet. Design é uma ferramenta. O que entregamos é uma percepção melhor construída.</p>
+        <a class="link-arrow" href="#/sobre">Conheça nossa história <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container reveal">
+      <div class="head-row"><div><span class="eyebrow">Processo</span><h2>Do primeiro contato à entrega.</h2></div>
+        <a class="link-arrow" href="#/processo">Conheça o processo <span>→</span></a></div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>Entendimento</h3></div>
+        <div class="step"><b>02</b><h3>Direção</h3></div>
+        <div class="step"><b>03</b><h3>Desenvolvimento</h3></div>
+        <div class="step"><b>04</b><h3>Refinamento</h3></div>
+        <div class="step"><b>05</b><h3>Entrega</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta light">
+    <div class="container reveal">
+      <h2>Faça sua empresa parecer a escolha óbvia.</h2>
+      <p class="lead">Conte sobre o seu negócio. A conversa começa pelo WhatsApp.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#/contato">Solicitar orçamento</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="page" data-route="sobre" data-title="Sobre — Agência Beltz" data-desc="Conheça a Agência Beltz: nossa história, o que acreditamos e por que trabalhamos com percepção de marca.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / Sobre</p>
+    <h1>A Beltz trabalha com percepção.</h1>
+    <p class="lead">Uma agência de Marília, São Paulo, para empresas que valem mais do que aparentam.</p>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><span class="eyebrow">Nossa história</span><h2>De Marília para a internet.</h2></div>
+    <div class="stack">
+      <p>A Beltz nasceu em Marília, São Paulo, e trabalha com serviços digitais que podem ser feitos de forma remota, para empresas de qualquer região.</p>
+      <p>No começo, a prioridade é construir portfólio, conquistar os primeiros clientes, validar as ofertas e aprimorar o processo. A ambição é maior: construir uma empresa reconhecida por transformar a percepção de negócios.</p>
+      <!-- EDITE: adicione aqui a história real da Beltz (ano de início, como começou, marcos) -->
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">Por que a Beltz existe</span><h2>O mercado enxerga o que a empresa consegue comunicar.</h2></div>
+    <div class="stack">
+      <p>Uma empresa pode ser excelente por dentro e ainda parecer comum por fora. Pode ter um ótimo serviço e uma apresentação fraca. Isso é um problema de percepção.</p>
+      <p>A Beltz existe para diminuir a distância entre o que uma empresa é e como ela é percebida.</p>
+    </div>
+  </div></section>
+
+  <section class="section light"><div class="container reveal">
+    <span class="eyebrow">O problema que observamos</span>
+    <h2 style="max-width:20ch">Muitas vezes, o problema não é o que a empresa oferece.</h2>
+    <div class="cols-3 rule" style="margin-top:56px">
+      <div><strong>Instagram desorganizado</strong><p>Um serviço excelente apresentado sem consistência.</p></div>
+      <div><strong>Site desatualizado</strong><p>Uma equipe profissional com uma vitrine que não acompanha.</p></div>
+      <div><strong>Identidade inconsistente</strong><p>Bons produtos que não parecem fazer parte da mesma marca.</p></div>
+      <div><strong>Preço sem valor percebido</strong><p>Um preço justo que parece barato pela forma como é apresentado.</p></div>
+      <div><strong>História não contada</strong><p>Uma trajetória forte que ninguém consegue enxergar.</p></div>
+      <div><strong>Melhor, mas parece menos</strong><p>Uma empresa superior ao concorrente, mas menos preparada na aparência.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container reveal">
+    <span class="eyebrow">O que acreditamos</span>
+    <p class="big-quote" style="font-size:clamp(30px,5vw,72px)">Visibilidade sem percepção <span>não é suficiente.</span></p>
+    <div class="cols-2 rule" style="margin-top:64px">
+      <div><strong>Quem não é visto não é lembrado</strong><p>Mas ser visto não é só aparecer. É ser compreendido, lembrado e desejado.</p></div>
+      <div><strong>Primeiro a percepção, depois a execução</strong><p>Antes de decidir como algo deve parecer, entendemos quem é a empresa e como ela quer ser percebida.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section light"><div class="container reveal">
+    <div class="cols-3">
+      <div><span class="eyebrow">Posicionamento</span><p class="statement">Fazemos marcas e empresas serem vistas de forma profissional na internet.</p></div>
+      <div><span class="eyebrow">Propósito</span><p class="statement">Fazer empresas serem percebidas da forma que merecem.</p></div>
+      <div><span class="eyebrow">Visão</span><p class="statement">Ser reconhecida por transformar a percepção de negócios, no Brasil e, no futuro, em outros mercados.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">Como pensamos</span><h2>Todo visual precisa existir por uma razão.</h2></div>
+    <div class="stack">
+      <p>Em cada projeto, a pergunta central é: <strong>"o que isso faz a pessoa pensar sobre essa empresa?"</strong></p>
+      <p>Um logo precisa representar. Uma identidade precisa criar reconhecimento. Um site precisa transmitir confiança. Uma peça precisa fazer sentido dentro da marca.</p>
+      <p>Usamos tecnologia, inclusive inteligência artificial, como ferramenta de produtividade. A direção continua sendo humana.</p>
+    </div>
+  </div></section>
+
+  <!-- FUNDADOR — edite foto, cargo e biografia -->
+  <section class="section light"><div class="container split reveal">
+    <div class="photo"><!-- FOTO DO FUNDADOR: troque o arquivo "Logo Beltz.png" pela foto --><img src="Logo Beltz.png" alt="Gabriel Beltrame, fundador da Agência Beltz" loading="lazy"></div>
+    <div class="stack">
+      <span class="eyebrow">Fundador</span>
+      <h2>Gabriel Beltrame</h2>
+      <p><strong>Fundador da Agência Beltz</strong></p>
+      <p><!-- BIOGRAFIA: escreva aqui a biografia real -->[INSIRA A BIOGRAFIA REAL AQUI]</p>
+      <p><!-- VISÃO SOBRE A EMPRESA -->[INSIRA AQUI A VISÃO DO FUNDADOR SOBRE A BELTZ]</p>
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">Beltz hoje</span><h2>Construindo portfólio e reputação.</h2></div>
+    <div class="stack"><p>Hoje a Beltz trabalha com marca, presença digital e comunicação para negócios locais e empresas em crescimento, validando ofertas e refinando o processo a cada projeto.</p></div>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><span class="eyebrow">Onde queremos chegar</span><h2>Uma agência nacional, depois internacional.</h2></div>
+    <div class="stack"><p>A ambição é atender negócios de diferentes tamanhos e regiões, aprofundando as soluções e estruturando a operação conforme a empresa cresce.</p></div>
+  </div></section>
+
+  <section class="section cta dark"><div class="container reveal">
+    <h2>Conheça nossos serviços.</h2>
+    <div class="actions"><a class="btn btn-primary" href="#/servicos">Ver serviços →</a><a class="btn btn-ghost" href="#/contato">Fale com a Beltz</a></div>
+  </div></section>
+
+</div>
+<div class="page" data-route="servicos" data-title="Serviços — Agência Beltz" data-desc="Marca, presença digital e comunicação. Conheça os serviços da Agência Beltz.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / Serviços</p>
+    <h1>Três pilares. Uma percepção.</h1>
+    <p class="lead">Marca, presença digital e comunicação trabalham juntos para que a empresa seja vista, compreendida e lembrada.</p>
+  </div></section>
+
+  <section class="section light"><div class="container reveal">
+    <div class="split end"><h2>Tudo precisa trabalhar em conjunto.</h2>
+      <p class="lead">Um logo precisa representar, um site precisa transmitir confiança, uma peça precisa fazer sentido dentro da marca. Por isso, os serviços da Beltz são organizados em três áreas que se complementam.</p></div>
+  </div></section>
+
+  <section class="section dark"><div class="container">
+    <div class="pillar-block reveal">
+      <span class="eyebrow">01 — Marca</span><h2>Marca</h2>
+      <div class="split">
+        <dl>
+          <div><dt>O que é</dt><dd>Os elementos responsáveis pela identidade visual e pela percepção da empresa.</dd></div>
+          <div><dt>Para quem serve</dt><dd>Empresas sem identidade, com identidade desatualizada ou inconsistente.</dd></div>
+          <div><dt>Quando contratar</dt><dd>Ao abrir um negócio, ao crescer além da imagem atual ou quando a marca não representa mais o nível da empresa.</dd></div>
+        </dl>
+        <dl>
+          <div><dt>O que pode incluir</dt><dd>Logo, identidade visual, redesign, estratégia visual e materiais de identidade.</dd></div>
+          <div><dt>Como funciona</dt><dd>Briefing, direção, desenvolvimento, ajustes e entrega dos arquivos finais.</dd></div>
+          <div><dt>Entregáveis e aplicações</dt><dd>Variam conforme o escopo: logo e versões, paleta, tipografia, aplicações em materiais, fachada, embalagem, uniforme.</dd></div>
+        </dl>
+      </div>
+      <p style="margin-top:32px"><a class="link-arrow" href="#/servicos/marca">Ver detalhes de Marca <span>→</span></a></p>
+    </div>
+    <div class="pillar-block reveal">
+      <span class="eyebrow">02 — Presença Digital</span><h2>Presença Digital</h2>
+      <div class="split">
+        <dl>
+          <div><dt>O que é</dt><dd>A transformação da empresa em uma experiência digital profissional.</dd></div>
+          <div><dt>Para quem serve</dt><dd>Empresas que precisam apresentar serviços, produtos e contato de forma clara e confiável.</dd></div>
+          <div><dt>Quando contratar</dt><dd>Quando o Instagram é a única vitrine, quando o site atual não valoriza o negócio ou quando há uma oferta ou campanha específica.</dd></div>
+        </dl>
+        <dl>
+          <div><dt>O que pode incluir</dt><dd>Site institucional, landing page e site link na bio.</dd></div>
+          <div><dt>Como funciona</dt><dd>Estrutura definida de acordo com o negócio, desenvolvimento responsivo e entrega online.</dd></div>
+          <div><dt>Possíveis aplicações</dt><dd>WhatsApp, formulários, galerias, catálogo, depoimentos, FAQ, localização.</dd></div>
+        </dl>
+      </div>
+      <p style="margin-top:32px"><a class="link-arrow" href="#/servicos/presenca-digital">Ver detalhes de Presença Digital <span>→</span></a></p>
+    </div>
+    <div class="pillar-block reveal">
+      <span class="eyebrow">03 — Comunicação</span><h2>Comunicação</h2>
+      <div class="split">
+        <dl>
+          <div><dt>O que é</dt><dd>Os materiais usados para divulgar, promover e apresentar a empresa, respeitando a identidade da marca.</dd></div>
+          <div><dt>Para quem serve</dt><dd>Empresas que já têm identidade e precisam de peças consistentes para divulgar.</dd></div>
+          <div><dt>Quando contratar</dt><dd>Em promoções, lançamentos, eventos ou na rotina de comunicação nas redes.</dd></div>
+        </dl>
+        <dl>
+          <div><dt>O que pode incluir</dt><dd>Criativos, artes para redes sociais, edição de vídeo, panfletos, flyers, cartazes, banners, outdoor, convites e faixas.</dd></div>
+          <div><dt>Como funciona</dt><dd>Briefing da peça, criação, ajustes e entrega nos formatos necessários.</dd></div>
+          <div><dt>Possíveis aplicações</dt><dd>Feed, stories, anúncios, impressos e comunicação visual externa.</dd></div>
+        </dl>
+      </div>
+      <p style="margin-top:32px"><a class="link-arrow" href="#/servicos/comunicacao">Ver detalhes de Comunicação <span>→</span></a></p>
+    </div>
+  </div></section>
+
+  <section class="section light"><div class="container reveal">
+    <span class="eyebrow">Visão geral</span><h2 style="margin-bottom:40px">Comparação.</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Marca</th><th>Presença Digital</th><th>Comunicação</th></tr></thead>
+      <tbody>
+        <tr><td>Foco</td><td>Identidade e reconhecimento</td><td>Experiência online</td><td>Divulgação e peças</td></tr>
+        <tr><td>Ideal para</td><td>Quem precisa de base visual</td><td>Quem precisa de vitrine e contato</td><td>Quem precisa divulgar</td></tr>
+        <tr><td>Exemplos</td><td>Logo, identidade, redesign</td><td>Site, landing page, link na bio</td><td>Criativos, edição de vídeo, flyers, banners</td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">Como escolher</span><h2>Por onde começar?</h2></div>
+    <div class="stack">
+      <p><strong>Sem identidade ou com identidade fraca:</strong> comece por Marca.</p>
+      <p><strong>Marca definida, sem vitrine digital:</strong> Presença Digital.</p>
+      <p><strong>Marca e site prontos, precisa divulgar:</strong> Comunicação.</p>
+      <p>Não sabe? Fale com a gente e entendemos o momento da sua empresa.</p>
+      <a class="link-arrow" href="#/contato">Solicitar orçamento <span>→</span></a>
+    </div>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><span class="eyebrow">FAQ</span><h2>Perguntas frequentes.</h2></div>
+    <div>
+      <details><summary>Posso contratar só um serviço?</summary><p>Sim. Cada serviço pode ser contratado separadamente, e muitos clientes começam por um e depois expandem.</p></details>
+      <details><summary>A Beltz atende empresas de qualquer segmento?</summary><p>Sim. O critério não é o segmento, é o potencial de melhorar a percepção do negócio.</p></details>
+      <details><summary>Como solicitar orçamento?</summary><p>Pelo formulário em Contato ou direto pelo WhatsApp. O escopo define investimento e prazo.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section cta dark"><div class="container reveal">
+    <h2>Qual pilar faz sentido para a sua empresa?</h2>
+    <div class="actions"><a class="btn btn-primary" href="#/contato">Solicitar orçamento</a><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+  </div></section>
+
+</div>
+<div class="page" data-route="servicos/marca" data-title="Marca — Serviços — Agência Beltz" data-desc="Logo, identidade visual, redesign, estratégia visual, materiais, embalagem, fachada e uniforme.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / <a href="#/servicos">Serviços</a> / Marca</p>
+    <h1>Marca.</h1>
+    <p class="lead">A base visual que faz a empresa ser reconhecida, lembrada e levada a sério.</p>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><h2>Uma marca não é só um símbolo.</h2></div>
+    <p class="lead">É o que a pessoa sente ao vê-la, o profissionalismo que percebe e a facilidade com que entende o que a empresa oferece. Cada serviço de Marca é pensado para construir isso, não apenas para ficar bonito.</p>
+  </div></section>
+
+  <section class="section dark"><div class="container">
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">01</span><h2>Logo</h2><p>Criação ou desenvolvimento do logotipo da empresa.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Logo." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que estão começando ou que não possuem um logo que as represente.</dd></div>
+        <div><dt>Quando faz sentido</dt><dd>Quando a empresa precisa de um símbolo ou logotipo para se apresentar com consistência.</dd></div>
+        <div><dt>O que pode incluir</dt><dd>Símbolo, logotipo e versões de aplicação.</dd></div>
+        <div><dt>Entregáveis possíveis</dt><dd><ul class="pill-list"><li>Símbolo</li><li>Logotipo</li><li>Positivo</li><li>Negativo</li><li>Horizontal</li><li>Vertical</li><li>Reduzida</li><li>Arquivos finais</li></ul></dd></div>
+        <div><dt>Como funciona</dt><dd>Briefing, proposta de direção, desenvolvimento, ajustes e entrega. Os itens exatos são definidos no orçamento.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">02</span><h2>Identidade Visual</h2><p>Um sistema visual para a marca ser consistente e reconhecível.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Identidade%20Visual." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que precisam ir além do logo e se apresentar de forma coerente em todos os pontos de contato.</dd></div>
+        <div><dt>Conceito e direção</dt><dd>Conceito visual, direção estética e posicionamento percebido.</dd></div>
+        <div><dt>Elementos</dt><dd><ul class="pill-list"><li>Cores</li><li>Tipografia</li><li>Elementos gráficos</li><li>Variações do logo</li><li>Aplicações</li></ul></dd></div>
+        <div><dt>Entregáveis possíveis</dt><dd>Paleta, tipografia, logo e variações, elementos, aplicações e apresentação. Manual de marca quando contratado.</dd></div>
+        <div><dt>Como funciona</dt><dd>Entendimento do negócio, definição de direção, desenvolvimento do sistema, refinamento e entrega.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">03</span><h2>Redesign</h2><p>Atualizar a marca sem perder o reconhecimento.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Redesign." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Quando a marca precisa de redesign</dt><dd>Quando a identidade ficou para trás do nível atual do negócio, parece antiga ou não funciona bem no digital.</dd></div>
+        <div><dt>O que pode ser preservado</dt><dd>Elementos que já geram reconhecimento: cores, formas, conceito ou nome visual.</dd></div>
+        <div><dt>O que pode ser atualizado</dt><dd>Traço, tipografia, paleta, aplicações e consistência entre materiais.</dd></div>
+        <div><dt>Como funciona</dt><dd>Análise da marca atual, definição do que muda e do que fica, desenvolvimento e entrega.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">04</span><h2>Estratégia Visual</h2><p>Como a empresa deve se apresentar visualmente.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Estrat%C3%A9gia%20Visual." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que sabem que precisam melhorar a percepção, mas não sabem por onde começar.</dd></div>
+        <div><dt>O que define</dt><dd><ul class="pill-list"><li>Percepção desejada</li><li>Posicionamento visual</li><li>Referências</li><li>Direção estética</li><li>Cores</li><li>Tipografia</li><li>Fotografia</li><li>Comunicação</li></ul></dd></div>
+        <div><dt>Como funciona</dt><dd>Entendimento do negócio, do público e dos concorrentes, e definição da direção que orienta os demais materiais.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">05</span><h2>Materiais de Identidade</h2><p>Materiais complementares à identidade da empresa.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Materiais%20de%20Identidade." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que já têm logo ou identidade e precisam aplicá-la no dia a dia.</dd></div>
+        <div><dt>O que inclui</dt><dd>Desenvolvimento dos materiais conforme a identidade da marca. O pacote pode combinar cartão de visita, papel timbrado e assinatura de e-mail.</dd></div>
+        <div><dt>Como funciona</dt><dd>Definição dos materiais, criação, ajustes e entrega pronta para uso ou gráfica.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">06</span><h2>Cartão de Visita</h2><p>Primeira impressão na mão do cliente.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Cart%C3%A3o%20de%20Visita." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Profissionais e empresas que fazem contato presencial.</dd></div>
+        <div><dt>O que inclui</dt><dd>Layout alinhado à identidade, frente e verso.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arquivo pronto para impressão. Uso em atendimento, eventos e embalagens.</dd></div>
+        <div><dt>Como funciona</dt><dd>Envio dos dados, criação, ajuste e entrega.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">07</span><h2>Papel Timbrado</h2><p>Documentos com a cara da empresa.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Papel%20Timbrado." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que enviam propostas, orçamentos, laudos e documentos.</dd></div>
+        <div><dt>O que inclui</dt><dd>Layout de papel timbrado alinhado à identidade.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arquivo editável ou pronto para impressão. Propostas, contratos e comunicados.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">08</span><h2>Assinatura de E-mail</h2><p>Cada e-mail como ponto de contato da marca.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Assinatura%20de%20E-mail." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Quem troca e-mails com clientes e parceiros no dia a dia.</dd></div>
+        <div><dt>O que inclui</dt><dd>Assinatura com dados de contato e identidade da empresa.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Assinatura pronta para instalar no seu provedor de e-mail.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">09</span><h2>Apresentação Comercial</h2><p>A empresa apresentada com profissionalismo.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Apresenta%C3%A7%C3%A3o%20Comercial." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que vendem por reunião, proposta ou contato direto.</dd></div>
+        <div><dt>O que inclui</dt><dd>Estrutura visual de apresentação conforme a identidade da marca.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arquivo de apresentação para uso comercial, envio por WhatsApp e e-mail.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">10</span><h2>Embalagem</h2><p>A marca presente no produto.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Embalagem." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Negócios que vendem produtos e querem valorizar a apresentação.</dd></div>
+        <div><dt>O que inclui</dt><dd>Desenvolvimento visual da embalagem, de acordo com o produto e a marca.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arte para produção. Caixas, sacolas, rótulos e etiquetas, conforme o escopo.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">11</span><h2>Fachada</h2><p>A comunicação visual do ponto físico.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Fachada." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Lojas, clínicas, escritórios e qualquer negócio com ponto físico.</dd></div>
+        <div><dt>O que inclui</dt><dd>Criação da comunicação visual de fachada alinhada à identidade.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arte para produção por empresa especializada. Letreiros, placas e adesivos.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">12</span><h2>Uniforme</h2><p>Equipe que representa a marca.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Uniforme." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas com equipe em contato com o cliente.</dd></div>
+        <div><dt>O que inclui</dt><dd>Desenvolvimento visual para uniformes conforme a identidade.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arte para bordado ou estampa. Camisas, aventais, jalecos e bonés.</dd></div>
+      </dl>
+    </article>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><span class="eyebrow">Para quem é</span><h2>Quem precisa de Marca.</h2></div>
+    <div class="stack">
+      <p>Empresas cuja apresentação está desatualizada, cuja identidade não representa o nível atual, que parecem menos profissionais que os concorrentes ou cujos materiais não conversam entre si.</p>
+      <p>O cliente ideal não procura "design". Procura uma empresa que faça o negócio parecer mais profissional.</p>
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container reveal">
+    <span class="eyebrow">Como funciona</span><h2>Do briefing à entrega.</h2>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Entendimento</h3><p>Negócio, público e contexto.</p></div>
+      <div class="step"><b>02</b><h3>Direção</h3><p>Percepção desejada e caminho visual.</p></div>
+      <div class="step"><b>03</b><h3>Desenvolvimento</h3><p>Criação dos elementos.</p></div>
+      <div class="step"><b>04</b><h3>Refinamento</h3><p>Ajustes previstos no processo.</p></div>
+      <div class="step"><b>05</b><h3>Entrega</h3><p>Arquivos finais organizados.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><span class="eyebrow">FAQ</span><h2>Perguntas sobre Marca.</h2></div>
+    <div>
+      <details><summary>Vocês fazem projetos do zero?</summary><p>Sim. Criamos a marca desde o início, com briefing e direção visual.</p></details>
+      <details><summary>Vocês fazem redesign?</summary><p>Sim. Avaliamos o que preservar e o que atualizar para manter o reconhecimento.</p></details>
+      <details><summary>Preciso contratar a identidade completa?</summary><p>Não. Você pode contratar só o logo, só materiais ou a identidade completa.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section cta dark"><div class="container reveal">
+    <h2>Construa uma marca à altura do seu negócio.</h2>
+    <div class="actions"><a class="btn btn-primary" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Marca." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn btn-ghost" href="#/contato">Solicitar orçamento</a></div>
+  </div></section>
+
+</div>
+<div class="page" data-route="servicos/presenca-digital" data-title="Presença Digital — Serviços — Agência Beltz" data-desc="Site institucional, landing page e site link na bio. Presença digital profissional com a Beltz.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / <a href="#/servicos">Serviços</a> / Presença Digital</p>
+    <h1>Presença Digital.</h1>
+    <p class="lead">Ter presença digital não é ter um endereço na internet. É ter uma experiência que transmite confiança.</p>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <h2>Um ecossistema, não canais soltos.</h2>
+    <p class="lead">A pessoa acha a empresa no Google, abre o Instagram, entra no site, clica no WhatsApp. Tudo isso forma uma única percepção, e o site é o ponto onde ela pode ser organizada e valorizada.</p>
+  </div></section>
+
+  <section class="section dark"><div class="container">
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">01</span><h2>Site Institucional</h2><p>Site completo para apresentar a empresa.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Site%20Institucional." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Empresas que precisam de uma sede digital com mais profundidade que uma página única.</dd></div>
+        <div><dt>Objetivo</dt><dd>Transmitir confiança, organizar informações, mostrar serviços e facilitar o contato.</dd></div>
+        <div><dt>Possíveis páginas</dt><dd><ul class="pill-list"><li>Home</li><li>Sobre</li><li>Serviços</li><li>Projetos</li><li>Depoimentos</li><li>Contato</li></ul></dd></div>
+        <div><dt>Funcionalidades</dt><dd><ul class="pill-list"><li>Formulários</li><li>WhatsApp</li><li>Galerias</li><li>FAQ</li><li>Localização</li></ul></dd></div>
+        <div><dt>Como funciona</dt><dd>A estrutura é definida de acordo com a empresa: briefing, arquitetura de páginas, desenvolvimento responsivo e entrega.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">02</span><h2>Landing Page</h2><p>Página focada em uma oferta ou campanha.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Landing%20Page." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Quem vende um produto, serviço ou campanha específica e quer guiar o visitante para uma ação.</dd></div>
+        <div><dt>Objetivo e conversão</dt><dd>Levar a pessoa do interesse ao contato, com uma única decisão clara.</dd></div>
+        <div><dt>Estrutura</dt><dd>Apresentação da oferta, benefícios, prova, perguntas frequentes e chamada para ação.</dd></div>
+        <div><dt>Funcionalidades possíveis</dt><dd><ul class="pill-list"><li>CTA para WhatsApp</li><li>Formulário</li><li>Galeria</li><li>FAQ</li></ul></dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">03</span><h2>Site Link na Bio</h2><p>Página compacta para concentrar os canais da empresa.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Site%20Link%20na%20Bio." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Quem recebe clientes pelo Instagram e quer uma entrada mais profissional que uma lista de links genérica.</dd></div>
+        <div><dt>Pode reunir</dt><dd><ul class="pill-list"><li>WhatsApp</li><li>Instagram</li><li>Catálogo</li><li>Serviços</li><li>Contato</li><li>Localização</li></ul></dd></div>
+        <div><dt>Como funciona</dt><dd>Definição dos links, design alinhado à marca e entrega online.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">04</span><h2>Páginas e Estruturas Digitais</h2><p>Soluções sob medida para necessidades específicas.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20P%C3%A1ginas%20Digitais." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>O que é</dt><dd>Páginas e estruturas digitais sob medida, quando o formato padrão não resolve. Também há manutenção, que varia conforme a quantidade e a complexidade das atualizações.</dd></div>
+        <div><dt>Como funciona</dt><dd>Conversamos sobre a necessidade e propomos a estrutura mais simples que resolve.</dd></div>
+      </dl>
+    </article>
+  </div></section>
+
+  <section class="section light"><div class="container cols-3 reveal">
+    <div><span class="eyebrow">Funcionalidades</span><p>Formulários, botões de WhatsApp, galerias, FAQ, depoimentos, mapa e localização.</p></div>
+    <div><span class="eyebrow">Responsividade</span><p>Todo site é pensado para funcionar bem em celular, tablet e computador.</p></div>
+    <div><span class="eyebrow">Integrações</span><p>WhatsApp, Instagram, formulários e outros canais, conforme a necessidade do projeto.</p></div>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">FAQ</span><h2>Perguntas sobre Presença Digital.</h2></div>
+    <div>
+      <details><summary>Qual a diferença entre site e landing page?</summary><p>O site apresenta a empresa em várias páginas. A landing page foca uma oferta ou campanha em uma única página.</p></details>
+      <details><summary>Funciona bem no celular?</summary><p>Sim. Todos os projetos são desenvolvidos para celular, tablet e desktop.</p></details>
+      <details><summary>E a manutenção?</summary><p>Varia conforme a quantidade e a complexidade das atualizações. Combinamos no orçamento.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section cta light"><div class="container reveal">
+    <h2>Sua empresa merece uma vitrine à altura.</h2>
+    <div class="actions"><a class="btn btn-primary" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Presen%C3%A7a%20Digital." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn btn-ghost" href="#/contato">Solicitar orçamento</a></div>
+  </div></section>
+
+</div>
+<div class="page" data-route="servicos/comunicacao" data-title="Comunicação — Serviços — Agência Beltz" data-desc="Criativos, artes para redes sociais, edição de vídeo, panfletos, flyers, cartazes, banners, outdoor, convites e faixas.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / <a href="#/servicos">Serviços</a> / Comunicação</p>
+    <h1>Comunicação.</h1>
+    <p class="lead">Peças que divulgam, promovem e apresentam a empresa respeitando a percepção desejada da marca.</p>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <h2>Cada peça precisa fazer sentido dentro da marca.</h2>
+    <p class="lead">Comunicar não é só publicar. Uma peça solta enfraquece a percepção. Uma peça alinhada à identidade a reforça.</p>
+  </div></section>
+
+  <section class="section dark"><div class="container">
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">01</span><h2>Criativos e Artes para Redes Sociais</h2><p>Peças para feed, stories, anúncios e campanhas.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Criativos%20%2F%20Artes%20para%20redes%20sociais." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>O que é</dt><dd>Peças para redes sociais, campanhas, anúncios e comunicação promocional.</dd></div>
+        <div><dt>Possíveis formatos</dt><dd><ul class="pill-list"><li>Feed</li><li>Story</li><li>Post</li><li>Anúncio</li><li>Campanha</li></ul></dd></div>
+        <div><dt>Como funciona</dt><dd>Você envia o briefing da peça, nós criamos, ajustamos e entregamos nos formatos necessários.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">02</span><h2>Edição de Vídeo</h2><p>Vídeos editados para redes sociais, anúncios e campanhas.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Edi%C3%A7%C3%A3o%20de%20V%C3%ADdeo." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>O que é</dt><dd>Edição de vídeos com a identidade da marca, para que o conteúdo em movimento reforce a mesma percepção do restante da comunicação.</dd></div>
+        <div><dt>Para quem é</dt><dd>Empresas que já gravam conteúdo e precisam de um acabamento profissional para publicar e divulgar.</dd></div>
+        <div><dt>Possíveis formatos</dt><dd><ul class="pill-list"><li>Reels</li><li>Story</li><li>Vídeo para anúncio</li><li>Vídeo institucional</li><li>Vídeo promocional</li></ul></dd></div>
+        <div><dt>O que pode incluir</dt><dd>Cortes, ritmo, legendas, textos, trilha e aplicação da identidade visual da marca.</dd></div>
+        <div><dt>Como funciona</dt><dd>Você envia o material gravado e o briefing, nós editamos, ajustamos e entregamos nos formatos necessários.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">03</span><h2>Panfletos e Flyers</h2><p>Impressos de divulgação objetivos e claros.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Panfleto%20%2F%20Flyer." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Negócios que divulgam promoções, lançamentos ou serviços presencialmente.</dd></div>
+        <div><dt>O que inclui</dt><dd>Layout de frente e verso conforme o material, alinhado à identidade.</dd></div>
+        <div><dt>Entregáveis e aplicações</dt><dd>Arquivo pronto para impressão. Distribuição em pontos de venda, eventos e balcão.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">04</span><h2>Cartazes e Banners</h2><p>Comunicação visual para o ponto de venda e eventos.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Cartaz%20%2F%20Banner." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Lojas, eventos e negócios com ponto físico.</dd></div>
+        <div><dt>O que inclui</dt><dd>Arte dimensionada para o formato final de impressão.</dd></div>
+        <div><dt>Aplicações</dt><dd>Vitrines, balcões, paredes, eventos e feiras.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">05</span><h2>Outdoor e Faixas</h2><p>Mídia externa que precisa ser lida em segundos.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Outdoor%20%2F%20Faixa." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>Para quem é</dt><dd>Negócios que querem ser vistos em ruas, fachadas e eventos.</dd></div>
+        <div><dt>O que inclui</dt><dd>Arte com hierarquia simples e leitura rápida, no tamanho de produção.</dd></div>
+        <div><dt>Aplicações</dt><dd>Mídia externa, inaugurações, campanhas sazonais e eventos.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">06</span><h2>Convites</h2><p>Para eventos, lançamentos e inaugurações.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Convite." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>O que inclui</dt><dd>Convite digital ou impresso alinhado à marca e ao tipo de evento.</dd></div>
+        <div><dt>Aplicações</dt><dd>Envio por WhatsApp e redes, ou impressão.</dd></div>
+      </dl>
+    </article>
+    <article class="svc reveal">
+      <div class="svc-head"><span class="n">07</span><h2>Campanhas Visuais e Materiais</h2><p>Um conjunto de peças com a mesma linguagem.</p><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Campanha%20Visual." target="_blank" rel="noopener">Pedir orçamento</a></div>
+      <dl>
+        <div><dt>O que é</dt><dd>Peças desenvolvidas em conjunto para uma ação, data ou lançamento, com unidade visual entre digital e impresso.</dd></div>
+        <div><dt>Como funciona</dt><dd>Definimos a ideia central e criamos as peças necessárias a partir dela.</dd></div>
+      </dl>
+    </article>
+  </div></section>
+
+  <section class="section light"><div class="container reveal">
+    <span class="eyebrow">Aplicações</span><h2 style="margin-bottom:36px">Onde a comunicação aparece.</h2>
+    <ul class="pill-list" style="gap:12px"><li>Instagram</li><li>Anúncios</li><li>Vídeos</li><li>WhatsApp</li><li>Ponto de venda</li><li>Eventos</li><li>Mídia externa</li><li>Impressos</li></ul>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">FAQ</span><h2>Perguntas sobre Comunicação.</h2></div>
+    <div>
+      <details><summary>Preciso ter identidade visual antes?</summary><p>Não é obrigatório, mas as peças ficam mais fortes quando seguem uma identidade. Podemos começar por ela.</p></details>
+      <details><summary>Posso pedir uma peça avulsa?</summary><p>Sim. Cada peça pode ser contratada separadamente.</p></details>
+      <details><summary>Vocês imprimem os materiais?</summary><p>Entregamos o arquivo pronto para impressão. A produção gráfica é feita pela gráfica de sua preferência.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section cta light"><div class="container reveal">
+    <h2>Comunique com a cara da sua marca.</h2>
+    <div class="actions"><a class="btn btn-primary" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Tenho%20interesse%20em%3A%20Comunica%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn btn-ghost" href="#/contato">Solicitar orçamento</a></div>
+  </div></section>
+
+</div>
+<div class="page" data-route="processo" data-title="Processo — Agência Beltz" data-desc="Como a Beltz trabalha: do primeiro contato ao pós-venda, e como funciona o processo criativo.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / Processo</p>
+    <h1>Como a Beltz trabalha.</h1>
+    <p class="lead">A percepção não começa na entrega do arquivo final. Começa no primeiro contato.</p>
+  </div></section>
+
+  <section class="section light"><div class="container reveal">
+    <span class="eyebrow">Processo criativo</span><h2>Cinco etapas.</h2>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Entendimento</h3><p>Quem é a empresa, o que oferece, para quem e como quer ser percebida.</p></div>
+      <div class="step"><b>02</b><h3>Direção</h3><p>Definimos a percepção desejada e o caminho visual.</p></div>
+      <div class="step"><b>03</b><h3>Desenvolvimento</h3><p>Criamos o projeto com intenção, não por estética.</p></div>
+      <div class="step"><b>04</b><h3>Refinamento</h3><p>Ajustes para chegar ao ponto certo.</p></div>
+      <div class="step"><b>05</b><h3>Entrega</h3><p>Arquivos finais organizados e enviados.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container reveal">
+    <span class="eyebrow">Processo operacional</span><h2 style="margin-bottom:48px">Da entrada ao pós-venda.</h2>
+    <div>
+      <div class="tl"><b>01</b><h3>Entrada do cliente</h3><p>Primeiro contato e coleta das informações iniciais, geralmente pelo WhatsApp ou formulário.</p></div>
+      <div class="tl"><b>02</b><h3>Briefing</h3><p>Entendimento do negócio, necessidades, objetivos, público e contexto.</p></div>
+      <div class="tl"><b>03</b><h3>Orçamento</h3><p>Definição de escopo, investimento, prazo e condições.</p></div>
+      <div class="tl"><b>04</b><h3>Pagamento</h3><p>Confirmação financeira para iniciar o projeto.</p></div>
+      <div class="tl"><b>05</b><h3>Produção</h3><p>Desenvolvimento do projeto conforme o escopo combinado.</p></div>
+      <div class="tl"><b>06</b><h3>Ajustes</h3><p>Aplicação dos ajustes previstos no processo.</p></div>
+      <div class="tl"><b>07</b><h3>Aprovação</h3><p>Validação final pelo cliente.</p></div>
+      <div class="tl"><b>08</b><h3>Entrega</h3><p>Organização e envio dos arquivos finais.</p></div>
+      <div class="tl"><b>09</b><h3>Pós-venda</h3><p>Acompanhamento e abertura para novos projetos e necessidades futuras.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section light"><div class="container split reveal">
+    <div><span class="eyebrow">FAQ</span><h2>Como funciona um projeto?</h2></div>
+    <div>
+      <details><summary>Como funciona um projeto?</summary><p>Começa com conversa e briefing, segue para orçamento e pagamento, depois produção, ajustes, aprovação e entrega.</p></details>
+      <details><summary>Quanto tempo leva?</summary><p>Depende do escopo. O prazo é definido no orçamento.</p></details>
+      <details><summary>A Beltz atende somente Marília?</summary><p>Não. Os serviços digitais podem ser feitos remotamente para qualquer região do Brasil.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section cta dark"><div class="container reveal"><h2>Vamos começar pelo briefing.</h2><div class="actions"><a class="btn btn-primary" href="#/contato">Solicitar orçamento</a><a class="btn btn-ghost" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></section>
+
+</div>
+<div class="page" data-route="depoimentos" data-title="Depoimentos — Agência Beltz" data-desc="O que clientes dizem sobre trabalhar com a Agência Beltz.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / Depoimentos</p>
+    <h1>Depoimentos.</h1>
+    <p class="lead">A confiança vem de quem já passou pelo processo.</p>
+  </div></section>
+
+  <!-- DEPOIMENTOS (versão em grade). Mantenha igual aos da Home. -->
+  <section class="section light"><div class="container">
+    <div class="t-grid">
+      <!-- DEPOIMENTO 01 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Trabalho incrível, muito obrigada pela sua atenção e paciência em fazer a arte do jeitinho que eu queria, ficaram lindas!
+Destacaram em meu perfil e com certeza vou vender mais!!! 🙌🧡"</div>
+        <div class="testimonial-author"><div><strong>Beatriz</strong><span>Bellan Móveis</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 02 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Maravilha, gostei muito."</div>
+        <div class="testimonial-author"><div><strong>Maria</strong><span>Moneo</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 03 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Beltrame, o site, o vídeo e o quiz ficaram perfeitos! Parabéns!"</div>
+        <div class="testimonial-author"><div><strong>Aline</strong><span>Professora - Fundação Bradesco</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 04 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Muito obrigada pela atenção aos detalhes, e fazer do jeito que eu queria, ficou perfeito! 😍😊
+Pegou bem a ideia do marketing KKKKK"</div>
+        <div class="testimonial-author"><div><strong>Beatriz</strong><span>Bellan Móveis</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 05 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Beleza Biel, era isso mesmo que eu precisava, gostei demais."</div>
+        <div class="testimonial-author"><div><strong>Daniel</strong><span>Drogaria S.A.</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 06 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Parabéns Gabriel, pela criação das mídias.
+Vamos juntos! 🚀"</div>
+        <div class="testimonial-author"><div><strong>Wilson</strong><span>Oniz Distribuidora</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 07 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Mano, ficou perfeito,obrigado de verdade."</div>
+        <div class="testimonial-author"><div><strong>Igor</strong><span>Igor Acabamentos</span></div></div>
+      </div>
+      <!-- DEPOIMENTO 08 -->
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Foi uma experiência muito boa, você é solícito, bastante criativo e atencioso. Mostra as suas ideias, mas respeita a vontade do "cliente", e melhora, isso é muito satisfatório. Obrigada pela agilidade também."</div>
+        <div class="testimonial-author"><div><strong>Maria</strong><span>Moneo</span></div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section cta dark"><div class="container reveal"><h2>Seja o próximo.</h2><div class="actions"><a class="btn btn-primary" href="#/contato">Solicitar orçamento</a></div></div></section>
+
+</div>
+<div class="page" data-route="contato" data-title="Contato — Agência Beltz" data-desc="Fale com a Agência Beltz pelo WhatsApp, e-mail ou formulário. Marília — SP.">
+
+  <section class="page-hero dark"><div class="container">
+    <p class="crumbs"><a href="#/">Início</a> / Contato</p>
+    <h1>Vamos conversar.</h1>
+    <p class="lead">Conte sobre o seu negócio. A resposta vem pelo WhatsApp ou e-mail.</p>
+  </div></section>
+
+  <section class="section light"><div class="container split">
+
+    <!-- FORMULÁRIO: ao enviar, abre o WhatsApp com a mensagem preenchida -->
+    <form id="contactForm" aria-label="Formulário de contato">
+      <div class="row">
+        <label>Nome<input type="text" name="nome" required autocomplete="name"></label>
+        <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label>WhatsApp<input type="tel" name="whatsapp" required autocomplete="tel"></label>
+        <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <label>Serviço
+        <select name="servico" required>
+          <option value="" disabled selected>Selecione</option>
+          <option>Marca</option>
+          <option>Presença Digital</option>
+          <option>Comunicação</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <label>Mensagem<textarea name="mensagem" required></textarea></label>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp →</button>
+        <button type="button" class="btn btn-ghost" id="sendMail">Enviar por e-mail</button>
+      </div>
+      <p class="form-note">O formulário abre o seu WhatsApp ou e-mail com a mensagem pronta. Nada é salvo neste site.</p>
+    </form>
+
+    <div>
+      <div class="contact-list">
+        <a href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><span><small>WhatsApp</small>+55 14 99113-2058</span><span>→</span></a>
+        <a href="mailto:comercial@agenciabeltz.com.br"><span><small>Comercial</small>comercial@agenciabeltz.com.br</span><span>→</span></a>
+        <a href="mailto:beltrame@agenciabeltz.com.br"><span><small>E-mail</small>beltrame@agenciabeltz.com.br</span><span>→</span></a>
+        <a href="mailto:agenciabeltz@gmail.com"><span><small>Suporte</small>agenciabeltz@gmail.com</span><span>→</span></a>
+        <a href="https://instagram.com/agenciabeltz" target="_blank" rel="noopener"><span><small>Instagram</small>@agenciabeltz</span><span>→</span></a>
+        <div><span><small>Localização</small>Marília — São Paulo — Brasil</span></div>
+        <!-- HORÁRIOS: adicione apenas se houver informação real -->
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section dark"><div class="container split reveal">
+    <div><span class="eyebrow">FAQ</span><h2>Antes de falar com a gente.</h2></div>
+    <div>
+      <details><summary>A Beltz atende empresas de qualquer segmento?</summary><p>Sim. O critério é o potencial de melhorar a percepção do negócio, não o segmento.</p></details>
+      <details><summary>A Beltz atende somente Marília?</summary><p>Não. Atendemos todo o Brasil de forma remota e, quando fizer sentido, presencialmente na região.</p></details>
+      <details><summary>Como funciona um projeto?</summary><p>Briefing, orçamento, pagamento, produção, ajustes, aprovação e entrega.</p></details>
+      <details><summary>Vocês fazem projetos do zero?</summary><p>Sim, do zero ou a partir do que a empresa já tem.</p></details>
+      <details><summary>Vocês fazem redesign?</summary><p>Sim. Avaliamos o que preservar e o que atualizar.</p></details>
+      <details><summary>Como solicitar orçamento?</summary><p>Pelo formulário acima, WhatsApp ou e-mail comercial.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section cta light"><div class="container reveal"><h2>Faça sua empresa parecer a escolha óbvia.</h2><div class="actions"><a class="btn btn-primary" href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></section>
+
+</div>
+</main>
+
+<section class="seo-block dark">
+  <div class="container">
+    <details class="seo-details">
+      <summary>Palavras-chave e termos de busca</summary>
+      <div class="seo-content">
+<h4>1. Palavras-chave principais</h4>
+<p>agência Beltz, agência de marketing, agência de publicidade, agência de branding, agência de comunicação, agência criativa, agência digital, agência de design, agência de design estratégico, agência de marketing digital, agência de identidade visual, agência de criação de marcas, agência de posicionamento de marca, agência de presença digital, agência de comunicação visual, estúdio de design, estúdio criativo, empresa de branding, empresa de marketing, empresa de publicidade, empresa de design, estratégia de marca, posicionamento de marca, imagem de marca, percepção de marca, presença profissional na internet, comunicação estratégica, identidade de marca, construção de marca, desenvolvimento de marcas, valorização de marcas.</p>
+<h4>2. Identidade visual</h4>
+<p>identidade visual, criação de identidade visual, identidade visual profissional, identidade visual para empresas, identidade visual para negócios, identidade visual para lojas, identidade visual para clínicas, identidade visual para escritórios, identidade visual para imobiliárias, identidade visual para restaurantes, identidade visual para consultórios, identidade visual moderna, identidade visual sofisticada, identidade visual minimalista, identidade visual premium, projeto de identidade visual, desenvolvimento de identidade visual, redesign de identidade visual, renovação de identidade visual, reformulação de identidade visual, manual de identidade visual, sistema visual de marca, elementos visuais de marca, padronização visual de empresa, identidade visual corporativa.</p>
+<h4>3. Logotipo e criação de marca</h4>
+<p>criação de logo, criação de logotipo, logo profissional, logotipo profissional, logo para empresa, logo para loja, logo para clínica, logo para escritório, logo para imobiliária, logo para restaurante, logo para marca de roupas, design de logotipo, desenvolvimento de logomarca, redesign de logo, modernização de logotipo, símbolo de marca, assinatura visual, marca visual, criação de marcas profissionais, projeto de marca.</p>
+<h4>4. Branding e posicionamento</h4>
+<p>branding, branding para empresas, branding para pequenas empresas, branding para negócios, estratégia de branding, estratégia de marca, posicionamento de marca, posicionamento estratégico, posicionamento de empresas, construção de marca, gestão de marca, desenvolvimento de marca, reposicionamento de marca, rebranding, personalidade de marca, identidade de marca, essência de marca, diferenciação de marca, percepção de valor da marca, valor percebido da marca, reconhecimento de marca, consistência de marca, experiência de marca, imagem corporativa, branding estratégico.</p>
+<h4>5. Design e materiais gráficos</h4>
+<p>design gráfico, design gráfico profissional, design para empresas, design para negócios, design de comunicação, design publicitário, design editorial, design de embalagens, design de papelaria corporativa, cartão de visita profissional, apresentação comercial profissional, papel timbrado personalizado, fachada comercial personalizada, uniforme corporativo personalizado, materiais institucionais, materiais de identidade visual, redesign de materiais gráficos, criação de peças gráficas, comunicação visual para empresas, design de materiais promocionais.</p>
+<h4>6. Criação de sites e desenvolvimento web</h4>
+<p>criação de sites, criação de sites profissionais, desenvolvimento de sites, desenvolvimento web, criação de site para empresa, site institucional, criação de site institucional, site profissional para empresas, site empresarial, site para pequenos negócios, site para empresas de serviços, site para lojas, site para clínicas, site para imobiliárias, site para escritórios, site para consultórios, site para empresas de móveis, site personalizado, desenvolvimento de site personalizado, site responsivo, design de sites, web design, web design profissional, design de interface para sites, reformulação de sites, redesign de site, modernização de site, manutenção de sites, otimização de sites, site com formulário de contato.</p>
+<h4>7. Landing pages e páginas comerciais</h4>
+<p>criação de landing page, landing page profissional, landing page para empresas, landing page para serviços, landing page para campanhas, página de vendas, página de conversão, página comercial, página de apresentação de empresa, página para captar clientes, página para divulgar serviços, página de captura de leads, site de apresentação profissional, link na bio profissional, criação de link na bio, página de links personalizada, página de contato empresarial, página de orçamento online.</p>
+<h4>8. Presença e imagem digital</h4>
+<p>presença digital, presença digital para empresas, presença online profissional, imagem digital da empresa, imagem profissional na internet, posicionamento digital, posicionamento online, profissionalizar presença digital, profissionalizar Instagram da empresa, perfil comercial profissional, apresentação digital da empresa, comunicação digital para negócios, identidade visual digital, experiência digital do cliente, credibilidade digital, reputação online, fortalecimento da presença digital, melhoria da imagem online, presença de marca na internet, estratégia de presença digital.</p>
+<h4>9. Marketing e publicidade</h4>
+<p>marketing para empresas, marketing para negócios locais, marketing estratégico, marketing empresarial, marketing de marca, marketing de serviços, marketing para pequenas empresas, publicidade para empresas, publicidade empresarial, publicidade criativa, publicidade estratégica, campanhas publicitárias, criação de campanhas publicitárias, estratégia de comunicação, planejamento de comunicação, comunicação empresarial, comunicação institucional, comunicação de marca, comunicação visual estratégica, materiais publicitários, criação de anúncios, criativos para publicidade, peças publicitárias, design para campanhas, marketing e branding.</p>
+<h4>10. Redes sociais e conteúdo visual</h4>
+<p>design para redes sociais, design para Instagram, identidade visual para Instagram, perfil profissional no Instagram, criativos para Instagram, artes para Instagram empresarial, conteúdo visual para empresas, comunicação para redes sociais, padronização visual do Instagram, posicionamento de marca no Instagram, design de posts comerciais, materiais para redes sociais, apresentação profissional no Instagram, imagem comercial nas redes sociais, estratégia visual para redes sociais.</p>
+<h4>11. Percepção, valor e diferenciação</h4>
+<p>percepção de marca, percepção de valor, valor percebido, valor percebido pelo cliente, imagem profissional da empresa, imagem de empresa confiável, como transmitir profissionalismo, como valorizar uma marca, como diferenciar uma empresa, como destacar uma marca, como melhorar a imagem de uma empresa, como gerar confiança pela imagem, como transmitir credibilidade, como aumentar o valor percebido, diferenciação empresarial, experiência do cliente, percepção do consumidor, reconhecimento empresarial, posicionamento competitivo, apresentação profissional de negócios, imagem que transmite confiança, design que valoriza marcas, estratégia visual para empresas, comunicação que transmite credibilidade, profissionalização de marcas.</p>
+<h4>12. SEO local: Marília e região</h4>
+<p>agência de marketing em Marília, agência de publicidade em Marília, agência de branding em Marília, agência de design em Marília, agência digital em Marília, agência criativa em Marília, empresa de marketing em Marília, empresa de publicidade em Marília, empresa de design em Marília, identidade visual em Marília, criação de logo em Marília, criação de logotipo em Marília, branding em Marília, design gráfico em Marília, criação de sites em Marília, desenvolvimento de sites em Marília, web design em Marília, site institucional em Marília, landing page em Marília, marketing digital em Marília, comunicação visual em Marília, posicionamento de marca em Marília, design para empresas em Marília, identidade visual para empresas em Marília, criação de marcas em Marília, agência de marketing na região de Marília, agência de publicidade na região de Marília, criação de sites na região de Marília, identidade visual na região de Marília, agência de marketing no interior de São Paulo, agência de design no interior de São Paulo, agência de publicidade no interior de São Paulo, agência de branding no interior de São Paulo, criação de sites no interior de São Paulo, identidade visual no interior de São Paulo, marketing para empresas em Marília, design para negócios locais em Marília, criação de sites para empresas em Marília, agência de comunicação em Marília, estúdio de design em Marília.</p>
+<h4>13. Palavras-chave por segmento de cliente</h4>
+<p>Lojas e comércio: identidade visual para lojas, branding para lojas, design para lojas de móveis, identidade visual para loja de móveis, criação de logo para loja de móveis, site para loja de móveis, identidade visual para lojas de roupas, branding para comércio, design para lojas de decoração, imagem profissional para comércio. Clínicas e saúde: identidade visual para clínicas, branding para clínicas, logo para clínica, site para clínica, identidade visual para consultório, design para área da saúde, comunicação visual para clínicas, identidade visual para odontologia, site para consultório odontológico, branding para profissionais da saúde. Imobiliárias e arquitetura: identidade visual para imobiliárias, branding para imobiliárias, logo para imobiliária, site para imobiliária, design para imobiliárias, identidade visual para arquitetos, branding para arquitetura, site para escritório de arquitetura, identidade visual para construtoras, imagem profissional para imobiliárias. Escritórios e prestadores de serviços: identidade visual para escritórios, branding para escritórios, site para escritório, identidade visual para advogados, site para escritório de advocacia, identidade visual para consultores, branding para prestadores de serviços, site para empresa de serviços, design para empresas B2B, imagem profissional para prestadores de serviços. Restaurantes e hospitalidade: identidade visual para restaurantes, branding para restaurantes, logo para restaurante, design para cafeterias, identidade visual para cafeterias, site para restaurante, identidade visual para hotéis, branding para hotelaria, design para bares, comunicação visual para restaurantes. Indústria e empresas B2B: branding para indústria, identidade visual para indústrias, site institucional para indústria, design para empresas B2B, identidade visual corporativa, branding para empresas de tecnologia, site para empresa de tecnologia, comunicação institucional para empresas, apresentação comercial corporativa, design para empresas de serviços.</p>
+<h4>14. Frases de pesquisa que potenciais clientes podem utilizar</h4>
+<p>qual agência de marketing contratar, agência para melhorar imagem da empresa, empresa para criar identidade visual, quanto custa criar uma identidade visual, quanto custa criar uma logo profissional, quanto custa desenvolver um site empresarial, quanto custa um site institucional, onde criar um site profissional, como escolher uma agência de branding, como profissionalizar a imagem de uma empresa, como melhorar a imagem da minha empresa, como fazer minha empresa parecer mais profissional, como transmitir mais confiança aos clientes, como diferenciar minha empresa dos concorrentes, como valorizar minha marca, como criar uma identidade visual para minha empresa, como renovar a identidade visual de uma empresa, quando fazer um rebranding, quando trocar a identidade visual da empresa, por que investir em identidade visual, por que minha empresa precisa de um site, como melhorar a presença digital da empresa, como deixar o Instagram da empresa mais profissional, como transmitir credibilidade pela internet, como fortalecer o posicionamento de uma marca, como criar uma marca profissional, como melhorar a percepção de valor da empresa, como destacar minha empresa no mercado, como apresentar melhor meus serviços na internet, como conquistar a confiança dos clientes pela internet, como criar uma presença online profissional, qual a diferença entre logo e identidade visual, qual a diferença entre branding e identidade visual, o que uma agência de branding faz, o que uma agência de publicidade faz, o que está incluso em uma identidade visual, o que precisa ter em um site institucional, como escolher a identidade visual da empresa, como tornar uma marca mais sofisticada, como modernizar a imagem de uma empresa, como melhorar a apresentação comercial da empresa, como criar um site para meu negócio, como escolher uma agência de design, como posicionar uma empresa no mercado, como aumentar o reconhecimento da marca, como criar uma imagem de marca consistente, como transmitir profissionalismo nas redes sociais, como destacar minha loja dos concorrentes, como construir uma marca confiável, como fazer minha empresa ser mais reconhecida.</p>
+<h4>15. Frases institucionais para o conteúdo do site</h4>
+<p>Fazemos marcas e empresas serem vistas de forma profissional na internet. Do invisível ao inevitável. Transformamos a forma como sua empresa é percebida. Construímos imagens de marca que transmitem profissionalismo. Estratégia visual para empresas que querem se destacar. Sua empresa merece uma apresentação à altura do que oferece. Identidade visual que fortalece a imagem da sua empresa. Presença digital pensada para valorizar o seu negócio. Marcas mais profissionais, consistentes e reconhecíveis. Comunicação visual alinhada ao posicionamento da sua empresa. Criamos identidades visuais para negócios que querem crescer. Desenvolvemos sites institucionais para apresentar sua empresa com profissionalismo. Projetos de branding, design e presença digital para empresas. Uma imagem mais profissional começa com uma estratégia bem definida. Seu negócio pode oferecer muito. Sua imagem precisa mostrar isso. Design estratégico para empresas que querem ser reconhecidas. Fortalecemos a imagem de empresas por meio de design e comunicação. Construímos experiências visuais que valorizam marcas. Uma presença digital que representa melhor a sua empresa. Mais clareza, consistência e profissionalismo na comunicação da sua marca. A imagem da sua empresa influencia a primeira impressão. Organizamos a comunicação visual para sua marca ser reconhecida. Sites, identidade visual e comunicação para empresas. Projetos visuais desenvolvidos de acordo com a realidade de cada negócio. Ajudamos empresas a se apresentarem melhor ao mercado. Uma marca bem apresentada transmite mais confiança. Criamos sistemas visuais que mantêm sua marca consistente. Seu posicionamento começa pela forma como sua empresa se apresenta. Design e estratégia para valorizar a percepção da sua marca. A Beltz trabalha a imagem, a presença digital e a comunicação de empresas.</p>
+<h4>16. Termos complementares relacionados a autoridade e resultados</h4>
+<p>credibilidade empresarial, profissionalismo de marca, imagem corporativa profissional, reputação de marca, consistência visual, clareza de posicionamento, estratégia de diferenciação, percepção do cliente, experiência visual, comunicação de valor, apresentação institucional, presença de marca, fortalecimento de marca, reconhecimento visual, identidade corporativa, design orientado à estratégia, estratégia de comunicação visual, valorização empresarial, posicionamento comercial, imagem de negócio, design para crescimento empresarial, experiência de marca digital, comunicação para empresas locais, branding para negócios em crescimento, estruturação de marca, coerência visual, identidade de comunicação, padronização de marca, design para reputação empresarial, diferenciação competitiva, apresentação de serviços, marketing de percepção, estratégia de imagem, construção de reputação, comunicação profissional, imagem de marca consistente, design para negócios, percepção de profissionalismo, experiência digital profissional, identidade visual consistente, estratégia de presença online, marca reconhecível, comunicação de posicionamento, design institucional, projeto de comunicação empresarial, imagem estratégica de marca, posicionamento visual, percepção de qualidade, comunicação para fortalecer marcas, design para empresas modernas.</p>
+<h4>17. Palavras-chave prioritárias</h4>
+<p>agência de branding, agência de design, agência de publicidade, identidade visual para empresas, criação de identidade visual, branding para empresas, posicionamento de marca, estratégia visual, percepção de marca, imagem profissional da empresa, criação de sites profissionais, site institucional para empresas, presença digital para empresas, design estratégico, criação de marcas, redesign de identidade visual, comunicação visual para empresas, agência de branding em Marília, criação de sites em Marília, identidade visual em Marília.</p>
+      </div>
+    </details>
+  </div>
+</section>
+<footer class="footer dark">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <!-- ESPAÇO PARA A LOGO (rodapé): troque o arquivo "Logo Agencia.png" -->
+        <a href="#/" class="brand" aria-label="Agência Beltz — início"><img class="brand-img" src="Logo Agencia.png" alt="Agência Beltz"></a>
+        <p>Do invisível ao inevitável.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#/sobre">Sobre</a></li>
+          <li><a href="#/servicos">Serviços</a></li>
+          <li><a href="#/processo">Processo</a></li>
+          <li><a href="#/depoimentos">Depoimentos</a></li>
+          <li><a href="#/contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5514991132058?text=Ol%C3%A1%21%20Conheci%20a%20Beltz%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp +55 14 99113-2058</a></li>
+          <li><a href="mailto:comercial@agenciabeltz.com.br">comercial@agenciabeltz.com.br</a></li>
+          <li><a href="mailto:beltrame@agenciabeltz.com.br">beltrame@agenciabeltz.com.br</a></li>
+          <li><a href="mailto:agenciabeltz@gmail.com">agenciabeltz@gmail.com</a></li>
+          <li><a href="https://instagram.com/agenciabeltz" target="_blank" rel="noopener">@agenciabeltz</a></li>
+          <li>Marília — SP, Brasil</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Agência Beltz. Todos os direitos reservados.</span><span>agenciabeltz.com.br</span></div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   AGÊNCIA BELTZ — JS COMPARTILHADO
+========================================================= */
+(function(){
+  /* CONFIG (edite aqui) */
+  var WHATSAPP = '5514991132058';
+  var EMAIL_COMERCIAL = 'comercial@agenciabeltz.com.br';
+
+  /* Ano no rodapé */
+  var year = document.getElementById('year');
+  if(year) year.textContent = new Date().getFullYear();
+
+  /* Menu mobile */
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('nav');
+  var header = document.getElementById('header');
+  function closeMenu(){
+    nav.classList.remove('open'); header.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Abrir menu');
+  }
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    header.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 20); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Reveal discreto */
+  var items = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.08});
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Esteira de depoimentos (só existe na Home) */
+  var rail = document.getElementById('rail');
+  if(rail){
+    var stepW = function(){ var c = rail.querySelector('.testimonial-card'); return c ? c.offsetWidth + 24 : 400; };
+    document.getElementById('railPrev').addEventListener('click', function(){ rail.scrollBy({left:-stepW(), behavior:'smooth'}); });
+    document.getElementById('railNext').addEventListener('click', function(){ rail.scrollBy({left:stepW(), behavior:'smooth'}); });
+    rail.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight') rail.scrollBy({left:stepW(), behavior:'smooth'});
+      if(e.key === 'ArrowLeft') rail.scrollBy({left:-stepW(), behavior:'smooth'});
+    });
+    var down = false, startX = 0, startL = 0;
+    rail.addEventListener('mousedown', function(e){ down = true; startX = e.pageX; startL = rail.scrollLeft; rail.classList.add('dragging'); });
+    window.addEventListener('mouseup', function(){ down = false; rail.classList.remove('dragging'); });
+    window.addEventListener('mousemove', function(e){ if(!down) return; e.preventDefault(); rail.scrollLeft = startL - (e.pageX - startX); });
+  }
+
+  /* Formulário de contato (só existe em Contato) */
+  var form = document.getElementById('contactForm');
+  if(form){
+    var formText = function(){
+      var d = new FormData(form);
+      return 'Olá! Conheci a Beltz pelo site.\n\n' +
+        'Nome: ' + d.get('nome') + '\n' +
+        'Empresa: ' + (d.get('empresa') || '-') + '\n' +
+        'WhatsApp: ' + d.get('whatsapp') + '\n' +
+        'E-mail: ' + d.get('email') + '\n' +
+        'Serviço: ' + d.get('servico') + '\n\n' +
+        'Mensagem: ' + d.get('mensagem');
+    };
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(formText()), '_blank', 'noopener');
+    });
+    document.getElementById('sendMail').addEventListener('click', function(){
+      if(!form.reportValidity()) return;
+      location.href = 'mailto:' + EMAIL_COMERCIAL + '?subject=' + encodeURIComponent('Orçamento — Site Beltz') + '&body=' + encodeURIComponent(formText());
+    });
+  }
+})();
+
+
+(function(){
+  var pages=document.querySelectorAll('.page'), navLinks=document.querySelectorAll('[data-nav]');
+  var descMeta=document.querySelector('meta[name="description"]');
+  var nav=document.getElementById('nav'), header=document.getElementById('header'), burger=document.getElementById('burger');
+  function observeReveal(){
+    document.querySelectorAll('.page.active .reveal:not(.in)').forEach(function(el){ el.classList.add('in'); });
+  }
+  function route(){
+    var r=(location.hash||'#/').replace(/^#\/?/,'').replace(/\/$/,'');
+    var found=null;
+    pages.forEach(function(p){ if(p.dataset.route===r) found=p; });
+    if(!found){ found=pages[0]; r=''; }
+    pages.forEach(function(p){ p.classList.toggle('active',p===found); });
+    document.title=found.dataset.title;
+    descMeta.setAttribute('content',found.dataset.desc);
+    var top=r.split('/')[0];
+    navLinks.forEach(function(a){ a.classList.toggle('active',a.dataset.nav===top); });
+    nav.classList.remove('open'); header.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded','false');
+    window.scrollTo(0,0); observeReveal();
+  }
+  window.addEventListener('hashchange',route);
+  route();
+})();
+
+</script>
+</body>
+</html>

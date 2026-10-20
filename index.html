@@ -329,6 +329,14 @@ img{max-width:100%;height:auto;display:block}
 .seo-content h4{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--heading);margin:26px 0 8px;letter-spacing:-.01em}
 .seo-content p{font-size:13px;color:var(--muted);line-height:1.75}
 
+
+/* AJUSTES MOBILE E TEXTOS */
+.statement{font-family:var(--font-body);font-weight:400;letter-spacing:0;font-size:18px;line-height:1.6}
+@media (max-width:640px){
+  .steps{grid-template-columns:1fr}
+  .step{padding-right:0}
+  .page-hero h1{font-size:clamp(30px,9vw,44px);overflow-wrap:anywhere}
+}
 </style>
 </head>
 <body>
@@ -392,7 +400,7 @@ img{max-width:100%;height:auto;display:block}
 
   <section class="section light">
     <div class="container split reveal">
-      <div class="photo"><!-- FOTO DO FUNDADOR: troque o arquivo "Logo Agencia.png" pela foto --><img src="Logo Agencia.png" alt="Gabriel Beltrame, fundador da Agência Beltz" loading="lazy"></div>
+      <div class="photo"><!-- FOTO DO FUNDADOR: troque o arquivo "Logo Beltz.png" pela foto --><img src="Logo Agencia.png" alt="Gabriel Beltrame, fundador da Agência Beltz" loading="lazy"></div>
       <div class="stack">
         <span class="eyebrow">Sobre a Beltz</span>
         <h2>Beltz é percepção.</h2>
@@ -436,16 +444,7 @@ img{max-width:100%;height:auto;display:block}
     <p class="lead">Uma agência de Marília, São Paulo, para empresas que valem mais do que aparentam.</p>
   </div></section>
 
-  <section class="section light"><div class="container split reveal">
-    <div><span class="eyebrow">Nossa história</span><h2>De Marília para a internet.</h2></div>
-    <div class="stack">
-      <p>A Beltz nasceu em Marília, São Paulo, e trabalha com serviços digitais que podem ser feitos de forma remota, para empresas de qualquer região.</p>
-      <p>No começo, a prioridade é construir portfólio, conquistar os primeiros clientes, validar as ofertas e aprimorar o processo. A ambição é maior: construir uma empresa reconhecida por transformar a percepção de negócios.</p>
-      <!-- EDITE: adicione aqui a história real da Beltz (ano de início, como começou, marcos) -->
-    </div>
-  </div></section>
-
-  <section class="section dark"><div class="container split reveal">
+    <section class="section light"><div class="container split reveal">
     <div><span class="eyebrow">Por que a Beltz existe</span><h2>O mercado enxerga o que a empresa consegue comunicar.</h2></div>
     <div class="stack">
       <p>Uma empresa pode ser excelente por dentro e ainda parecer comum por fora. Pode ter um ótimo serviço e uma apresentação fraca. Isso é um problema de percepção.</p>
@@ -453,7 +452,7 @@ img{max-width:100%;height:auto;display:block}
     </div>
   </div></section>
 
-  <section class="section light"><div class="container reveal">
+  <section class="section dark"><div class="container reveal">
     <span class="eyebrow">O problema que observamos</span>
     <h2 style="max-width:20ch">Muitas vezes, o problema não é o que a empresa oferece.</h2>
     <div class="cols-3 rule" style="margin-top:56px">
@@ -466,7 +465,7 @@ img{max-width:100%;height:auto;display:block}
     </div>
   </div></section>
 
-  <section class="section dark"><div class="container reveal">
+  <section class="section light"><div class="container reveal">
     <span class="eyebrow">O que acreditamos</span>
     <p class="big-quote" style="font-size:clamp(30px,5vw,72px)">Visibilidade sem percepção <span>não é suficiente.</span></p>
     <div class="cols-2 rule" style="margin-top:64px">
@@ -475,7 +474,7 @@ img{max-width:100%;height:auto;display:block}
     </div>
   </div></section>
 
-  <section class="section light"><div class="container reveal">
+  <section class="section dark"><div class="container reveal">
     <div class="cols-3">
       <div><span class="eyebrow">Posicionamento</span><p class="statement">Fazemos marcas e empresas serem vistas de forma profissional na internet.</p></div>
       <div><span class="eyebrow">Propósito</span><p class="statement">Fazer empresas serem percebidas da forma que merecem.</p></div>
@@ -483,7 +482,7 @@ img{max-width:100%;height:auto;display:block}
     </div>
   </div></section>
 
-  <section class="section dark"><div class="container split reveal">
+  <section class="section light"><div class="container split reveal">
     <div><span class="eyebrow">Como pensamos</span><h2>Todo visual precisa existir por uma razão.</h2></div>
     <div class="stack">
       <p>Em cada projeto, a pergunta central é: <strong>"o que isso faz a pessoa pensar sobre essa empresa?"</strong></p>
@@ -492,29 +491,7 @@ img{max-width:100%;height:auto;display:block}
     </div>
   </div></section>
 
-  <!-- FUNDADOR — edite foto, cargo e biografia -->
-  <section class="section light"><div class="container split reveal">
-    <div class="photo"><!-- FOTO DO FUNDADOR: troque o arquivo "Logo Beltz.png" pela foto --><img src="Logo Beltz.png" alt="Gabriel Beltrame, fundador da Agência Beltz" loading="lazy"></div>
-    <div class="stack">
-      <span class="eyebrow">Fundador</span>
-      <h2>Gabriel Beltrame</h2>
-      <p><strong>Fundador da Agência Beltz</strong></p>
-      <p><!-- BIOGRAFIA: escreva aqui a biografia real -->[INSIRA A BIOGRAFIA REAL AQUI]</p>
-      <p><!-- VISÃO SOBRE A EMPRESA -->[INSIRA AQUI A VISÃO DO FUNDADOR SOBRE A BELTZ]</p>
-    </div>
-  </div></section>
-
-  <section class="section dark"><div class="container split reveal">
-    <div><span class="eyebrow">Beltz hoje</span><h2>Construindo portfólio e reputação.</h2></div>
-    <div class="stack"><p>Hoje a Beltz trabalha com marca, presença digital e comunicação para negócios locais e empresas em crescimento, validando ofertas e refinando o processo a cada projeto.</p></div>
-  </div></section>
-
-  <section class="section light"><div class="container split reveal">
-    <div><span class="eyebrow">Onde queremos chegar</span><h2>Uma agência nacional, depois internacional.</h2></div>
-    <div class="stack"><p>A ambição é atender negócios de diferentes tamanhos e regiões, aprofundando as soluções e estruturando a operação conforme a empresa cresce.</p></div>
-  </div></section>
-
-  <section class="section cta dark"><div class="container reveal">
+      <section class="section cta dark"><div class="container reveal">
     <h2>Conheça nossos serviços.</h2>
     <div class="actions"><a class="btn btn-primary" href="#/servicos">Ver serviços →</a><a class="btn btn-ghost" href="#/contato">Fale com a Beltz</a></div>
   </div></section>
